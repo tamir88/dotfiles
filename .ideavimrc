@@ -1,12 +1,23 @@
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+" Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+
+" set scrolloff=5
+" set incsearch
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
 set number relativenumber
 set idearefactormode=keep
 set ideajoin
-set surround
-set easymotion
 
 let mapleader = " "
-
 noremap <Esc> <nop>
+inoremap kk <Esc>
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
@@ -17,31 +28,29 @@ inoremap <C-k> <Esc>:m -2<CR>gi
 
 " system clipboard
 " changed from "+ to "* in version 2.5.0
-vmap <leader>y "*y
-vmap <leader>d "*d
-nmap <leader>y "*yy
-nmap <leader>p "*p
-nmap <leader>P "*P
-vmap <leader>p "*p
-vmap <leader>P "*P
-
-" scrolling
-nmap <leader>d <C-d>
-nmap <leader>u <C-u>
-vmap <leader>d <C-d>
-vmap <leader>u <C-u>
+vmap <leader>y "+y
+vmap <leader>d "+d
+nmap <leader>y "+yy
+nmap <leader>p "+p
+nmap <leader>P "+P
+vmap <leader>p "+p
+vmap <leader>P "+P
 
 " actions
-nmap <leader>h <action>(PreviousTab)
-nmap <leader>l <action>(NextTab)
-nmap <leader>bd <action>(CloseEditor)
 nmap <leader>i <action>(Generate)
 nmap <leader>m <action>(Git.Menu)
 nmap <leader>s <action>(QuickChangeScheme)
 nmap <leader>/ <action>(ShowErrorDescription)
 nmap <leader>e <action>(GotoNextError)
-nnoremap <leader><leader> <C-Tab>
+" nnoremap <leader><leader> <C-Tab>
 
-set NERDTree
-let g:NERDTreeMapActivateNode='l'
-let g:NERDTreeMapJumpParent='h'
+" vim short key
+"alt+l nextTab
+"alt+h previousTab
+"alt+w closeTab
+"Shift+0 reload ideavimrc
+"ctl+alt+l formatting
+" alt+c autoCompletion
+" Ctrl+t terminal
+" Ctrl+e recentFiles
+" Ctrl+f quickSearch
