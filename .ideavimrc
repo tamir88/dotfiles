@@ -1,6 +1,5 @@
 " You can find a list of commands here: https://jb.gg/h38q75
 " Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-
 let mapleader = " "
 
 """ Plugins ------------------------------------------
@@ -24,7 +23,12 @@ inoremap <C-j> <Esc>:m +1<CR>gi
 inoremap <C-k> <Esc>:m -2<CR>gi
 nmap <A-j> 5j
 nmap <A-k> 5k
-"noremap <Esc> <nop>
+vnoremap <A-j> 5j
+vnoremap <A-k> 5k
+nnoremap <A-l> $
+nnoremap <A-h> _
+vmap <A-l> $
+vmap <A-h> _
 
 " clipboard
 vmap <leader>y "+y
@@ -43,12 +47,17 @@ nmap <leader>/ <action>(ShowErrorDescription)
 nmap <leader>e <action>(GotoNextError)
 
 """ Idea shortcut ---------------------------------------
-"alt+l nextTab
-"alt+h previousTab
-"alt+w closeTab
-"Shift+0 reload ideavimrc
-"ctl+alt+l formatting
-"alt+c autoCompletion
-"ctrl+t terminal
-"ctrl+e recentFiles
-"ctrl+f quickSearch
+"shift+alt+l -> nextTab
+"shift+alt+h -> previousTab
+"alt+w -> closeTab
+"Shift+0 -> reload ideavimrc
+"ctl+alt+l -> formatting
+"alt+a -> autoCompletion
+"alt+t -> terminal
+"ctrl+e -> recentFiles
+"ctrl+f -> quickSearch
+"alt+n -> next selection with cursor
+
+""" idea plugins -----------------------------------------
+" atom icons
+" ideavim
